@@ -15,11 +15,9 @@
 
 
 	<view class="wrap">
-		
 		<u-waterfall v-model="flowList" ref="uWaterfall1">
 			<template v-slot:left="{leftList}">
 				<view class="demo-warter" v-for="(item, index) in leftList" :key="index">
-					<!-- 警告：微信小程序中需要hx2.8.11版本才支持在template中结合其他组件，比如下方的lazy-load组件 -->
 					<u-lazy-load threshold="-450" border-radius="10" :image="item.image" :index="index"></u-lazy-load>
 					<view class="demo-title">
 						{{item.title}}
@@ -146,7 +144,7 @@
 		width: 100%;
 	}
 
-	tab-strickt {
+	.tab-strickt {
 		position: sticky;
 		z-index: 99;
 		top: 0;
