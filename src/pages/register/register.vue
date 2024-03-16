@@ -33,12 +33,9 @@
 
 
 <script setup>
-	import {
-		ref,
-		reactive
-	} from 'vue';
+import {reactive, ref} from 'vue';
 
-	// 用户选择的头像事件处理函数
+// 用户选择的头像事件处理函数
 	const onChooseAvatar = (e) => {
 		const {
 			avatarUrl

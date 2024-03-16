@@ -4,6 +4,7 @@
 
 <script>
 import Emitter from "../../libs/util/emitter.js";
+
 /**
  * checkboxGroup 开关选择器父组件Group
  * @description 复选框组件一般用于需要多个选择的场景，该组件功能完整，使用方便

@@ -73,9 +73,7 @@
 </template>
 
 <script setup>
-import {
-  ref
-} from 'vue';
+import {ref} from 'vue';
 
 const indicatorDots = ref(true) //有圆点
 const indicatorColor = ref("#FFF")

@@ -17,8 +17,9 @@
 </template>
 
 <script>
-	import colorGradient from '../../libs/function/colorGradient';
-	let color = colorGradient;
+import colorGradient from '../../libs/function/colorGradient';
+
+let color = colorGradient;
 	const { windowWidth } = uni.getSystemInfoSync();
 	const preId = 'UEl_';
 

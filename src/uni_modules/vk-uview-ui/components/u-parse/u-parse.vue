@@ -19,9 +19,13 @@
 
 <script>
 	var search;
-	// #ifndef H5 || APP-PLUS-NVUE || MP-360
+  // #ifndef H5 || APP-PLUS-NVUE || MP-360
   import Parser from '../u-trees/MpHtmlParser.js'
-	var cache = {};
+  // #endif
+  // #ifdef H5 || APP-PLUS-NVUE || MP-360
+  import cfg from '../u-trees/config.js'
+
+  var cache = {};
 		// #ifdef MP-WEIXIN || MP-TOUTIAO
 	var	fs = uni.getFileSystemManager ? uni.getFileSystemManager() : null;
 		// #endif
@@ -32,10 +36,8 @@
 			val += (val << 5) + str.charCodeAt(i);
 		return val;
 	}
-	// #endif
-	// #ifdef H5 || APP-PLUS-NVUE || MP-360
-  import cfg from '../u-trees/config.js'
-	var {
+
+  var {
 		windowWidth,
 		platform
 	} = uni.getSystemInfoSync()

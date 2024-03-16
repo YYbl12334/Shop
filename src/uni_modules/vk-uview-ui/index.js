@@ -4,25 +4,6 @@ import mixin from './libs/mixin/mixin.js'
 // import wxshare from './libs/mixin/mpShare.js'
 // 全局挂载引入http相关请求拦截插件
 import http from './libs/request'
-
-function wranning(str) {
-	// 开发环境进行信息输出,主要是一些报错信息
-	// 这个环境的来由是在程序编写时候,点击hx编辑器运行调试代码的时候,详见:
-	// 	https://uniapp.dcloud.io/frame?id=%e5%bc%80%e5%8f%91%e7%8e%af%e5%a2%83%e5%92%8c%e7%94%9f%e4%ba%a7%e7%8e%af%e5%a2%83
-	if (process.env.NODE_ENV === 'development') {
-		console.warn(str)
-	}
-}
-
-// 尝试判断在根目录的/store中是否有$u.mixin.js，此文件uView默认为需要挂在到全局的vuex的state变量
-// HX2.6.11版本,放到try中,控制台依然会警告,暂时不用此方式，
-// let vuexStore = {};
-// try {
-// 	vuexStore = require("@/store/$u.mixin.js");
-// } catch (e) {
-// 	//TODO handle the exception
-// }
-
 // post类型对象参数转为get类型url参数
 import queryParams from './libs/function/queryParams.js'
 // 路由封装
@@ -63,7 +44,7 @@ import $parent from './libs/function/$parent.js'
 // 获取sys()和os()工具方法
 // 获取设备信息，挂载到$u的sys()(system的缩写)属性中，
 // 同时把安卓和ios平台的名称"ios"和"android"挂到$u.os()中，方便取用
-import {sys, os} from './libs/function/sys.js'
+import {os, sys} from './libs/function/sys.js'
 // 防抖方法
 import debounce from './libs/function/debounce.js'
 // 节流方法
@@ -76,6 +57,24 @@ import addStyle from './libs/function/addStyle.js'
 import config from './libs/config/config.js'
 // 各个需要fixed的地方的z-index配置文件
 import zIndex from './libs/config/zIndex.js'
+
+function wranning(str) {
+	// 开发环境进行信息输出,主要是一些报错信息
+	// 这个环境的来由是在程序编写时候,点击hx编辑器运行调试代码的时候,详见:
+	// 	https://uniapp.dcloud.io/frame?id=%e5%bc%80%e5%8f%91%e7%8e%af%e5%a2%83%e5%92%8c%e7%94%9f%e4%ba%a7%e7%8e%af%e5%a2%83
+	if (process.env.NODE_ENV === 'development') {
+		console.warn(str)
+	}
+}
+
+// 尝试判断在根目录的/store中是否有$u.mixin.js，此文件uView默认为需要挂在到全局的vuex的state变量
+// HX2.6.11版本,放到try中,控制台依然会警告,暂时不用此方式，
+// let vuexStore = {};
+// try {
+// 	vuexStore = require("@/store/$u.mixin.js");
+// } catch (e) {
+// 	//TODO handle the exception
+// }
 
 const $u = {
 	queryParams: queryParams,

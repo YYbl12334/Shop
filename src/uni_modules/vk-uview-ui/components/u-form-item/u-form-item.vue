@@ -43,9 +43,9 @@
 </template>
 
 <script>
-	import Emitter from '../../libs/util/emitter.js';
-	import schema from '../../libs/util/async-validator';
-	// 去除警告信息
+import Emitter from '../../libs/util/emitter.js';
+import schema from '../../libs/util/async-validator';
+// 去除警告信息
 	schema.warning = function() {};
 
 	/**

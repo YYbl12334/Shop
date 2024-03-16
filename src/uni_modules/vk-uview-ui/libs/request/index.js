@@ -1,5 +1,6 @@
 import deepMerge from "../function/deepMerge";
 import validate from "../function/test";
+
 class Request {
 	// 设置全局默认配置
 	setConfig(customConfig) {

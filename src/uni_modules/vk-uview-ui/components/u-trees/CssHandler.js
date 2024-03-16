@@ -1,4 +1,5 @@
 import cfg from './config.js'
+
 var isLetter = c => (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z');
 
 function CssHandler(tagStyle) {

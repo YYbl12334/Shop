@@ -39,6 +39,7 @@
 
 <script>
 import WeCropper from './weCropper.js';
+
 export default {
 	props: {
 		// 裁剪矩形框的样式，其中可包含的属性为lineWidth-边框宽度(单位rpx)，color: 边框颜色，

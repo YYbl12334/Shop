@@ -135,8 +135,9 @@
 </template>
 
 <script>
-	import uSwiperIndicator from "./components/u-swiper-indicator"
-	/**
+import uSwiperIndicator from "./components/u-swiper-indicator"
+
+/**
 	 * Swiper 轮播图
 	 * @description 该组件一般用于导航轮播，广告展示等场景,可开箱即用，
 	 * @tutorial https://www.uviewui.com/components/swiper.html

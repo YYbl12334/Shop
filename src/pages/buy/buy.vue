@@ -65,10 +65,9 @@
 </template>
 
 <script setup>
-	import {
-		ref
-	} from 'vue';
-	const current = ref(0);
+import {ref} from 'vue';
+
+const current = ref(0);
 	const tabList = ref([{
 			cate_name: '全部'
 		},

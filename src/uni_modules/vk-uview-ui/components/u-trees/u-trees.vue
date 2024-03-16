@@ -92,8 +92,9 @@
 	}
 	let globalData = {};
 	globalData.Parser = {};
-	import cfg from './config.js'
-	const errorImg = cfg.errorImg;
+  import cfg from './config.js'
+
+  const errorImg = cfg.errorImg;
 	export default {
 		name: 'u-trees',
 		data() {

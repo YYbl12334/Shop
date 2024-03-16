@@ -141,6 +141,7 @@
 import provinces from "../../libs/address/provinces.json";
 import citys from "../../libs/address/citys.json";
 import areas from "../../libs/address/areas.json";
+
 /**
  * picker picker弹出选择器
  * @description 此选择器有两种弹出模式：一是时间模式，可以配置年，日，月，时，分，秒参数 二是地区模式，可以配置省，市，区参数

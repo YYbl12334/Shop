@@ -47,11 +47,9 @@
 </template>
 
 <script setup>
-	import {
-		ref,
-		reactive,
-	} from 'vue';
-	const addModel = reactive([{
+import {reactive, ref,} from 'vue';
+
+const addModel = reactive([{
 		type: '',
 		title: '',
 		introduce: '',

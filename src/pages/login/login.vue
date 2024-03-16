@@ -25,10 +25,8 @@
 </template>
 
 <script setup>
-	import {
-		reactive,
-	} from 'vue';
-	// import { useRouter } from 'vue-router';
+import {reactive,} from 'vue';
+// import { useRouter } from 'vue-router';
 
 	// 表单数据模型
 	const loginModel = reactive({
