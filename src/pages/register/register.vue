@@ -23,7 +23,7 @@
 				<u-input placeholder="请输入确定密码" v-model="loginModel.passwordConfirm" />
 			</u-form-item>
 
-			<view class="passtext">已有账号,去登录</view>
+			<view class="passtext" @click="to">已有账号,去登录</view>
 
 			<!-- 注册按钮 -->
 			<u-button type="success" :custom-style="customStyle1">注册</u-button>
@@ -33,15 +33,24 @@
 
 
 <script setup>
-import {reactive, ref} from 'vue';
+	import {
+		ref,
+		reactive
+	} from 'vue';
 
-// 用户选择的头像事件处理函数
+	// 用户选择的头像事件处理函数
 	const onChooseAvatar = (e) => {
 		const {
 			avatarUrl
 		} = e.detail
 		avatar.value = avatarUrl
 	};
+	const to = (e)=>{
+		console.log(e)
+		uni.navigateTo({
+			url:'/pages/login/login'
+		})
+	}
 
 	// 默认Logo头像URL
 	const avatar = ref('/static/Login/user.jpg');
